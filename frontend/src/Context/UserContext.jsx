@@ -20,7 +20,7 @@ export function AuthProvider({ children }) {
     
    const getGeminiResponse= async(command)=>{
       try {
-        const result=await axios.post("http://localhost:8000/api/cur/asktoassistent",{command},{
+        const result=await axios.post("https://virtualaibackend-5ara.onrender.com/api/cur/asktoassistent",{command},{
           withCredentials:true
         })
         
@@ -72,3 +72,4 @@ export function AuthProvider({ children }) {
 }
 export const useAuth = () => useContext(AuthContext);
 // export default AuthProvider
+
