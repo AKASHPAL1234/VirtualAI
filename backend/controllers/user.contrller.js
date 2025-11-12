@@ -25,9 +25,9 @@ export const  signup=async(req,res)=>{
     const token=await gentoken(user._id);
     res.cookie("token",token,{
         httpOnly:true,
-        sameSite:"strict",
+        sameSite:"None",
         maxAge:7*24*60*60*1000,
-        secure:false
+        secure:true
     })
      return res.status(201).json({message:"User SingUp sucessfully"})
     } catch (error) {
@@ -52,9 +52,9 @@ export const  singin=async(req,res)=>{
     const token= await gentoken(user._id);
     res.cookie("token",token,{
         httpOnly:true,
-        sameSite:"strict",
+        sameSite:"None",
         maxAge:7*24*60*60*1000,
-        secure:false
+        secure:true
     })
      return res.status(201).json({message:"User SingIn sucessfully"})
     } catch (error) {
@@ -163,4 +163,5 @@ export const asktoassistent=async(req,res)=>{
           return res.status(400).json({message:` error in asktoassistent ${error}`}) 
         
     }
+
 }
