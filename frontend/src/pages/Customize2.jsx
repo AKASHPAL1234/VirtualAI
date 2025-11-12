@@ -32,7 +32,7 @@ function Customize2() {
         formData.append("imageUrl", selectedImage);
       }
       const result = await axios.post(
-        "http://localhost:8000/api/cur/update",
+        "https://virtualaibackend-5ara.onrender.com/api/cur/update",
         formData,
         { withCredentials: true }
       );
@@ -85,3 +85,4 @@ function Customize2() {
 }
 
 export default Customize2;
+
