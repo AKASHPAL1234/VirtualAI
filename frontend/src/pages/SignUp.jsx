@@ -22,7 +22,7 @@ function SignUp() {
     setLoading(true);
     try {
       let result = await axios.post(
-        "http://localhost:8000/api/user/signup",
+        "https://virtualaibackend-5ara.onrender.com/api/user/signup",
         { name, email, password },
         {
           withCredentials: true,
@@ -125,3 +125,4 @@ function SignUp() {
 }
 
 export default SignUp;
+
