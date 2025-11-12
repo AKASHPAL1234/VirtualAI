@@ -10,7 +10,7 @@ dotenv.config();
 
 const app=express();
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://virtualaifrontend.onrender.com",
     credentials:true
 }))
 app.use(express.json())
@@ -34,4 +34,5 @@ app.listen(port,()=>{
     connectdb();
     console.log(`server contected at ${port}`)
     
+
 })
