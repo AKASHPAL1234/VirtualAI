@@ -21,7 +21,7 @@ function Home() {
 
   const handellogout = async () => {
     try {
-      const result = await axios.get("http://localhost:8000/api/user/logout", {
+      const result = await axios.get("https://virtualaibackend-5ara.onrender.com/api/user/logout", {
         withCredentials: true,
       });
       setProfile(null);
@@ -348,4 +348,5 @@ export default Home;
 //       <h1 className="text-white text-xl">
 //         {usertext ? usertext : aitext ? aitext : null}
 //       </h1>
+
 //     </div>
